@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Send message") { sendMessage() }
+    }
+    
+    private func sendMessage() {
+        let uuid = UUID().uuidString
+        print(uuid)
     }
 }
 
