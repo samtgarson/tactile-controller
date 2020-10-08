@@ -1,16 +1,23 @@
-import Head from 'next/head'
-import { Container, Section, Title } from 'rbx'
+import Link from 'next/link'
+import { Title, Button } from 'rbx'
+import React, { FunctionComponent, useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
-export default function Home() {
+const Home: FunctionComponent = () => {
+  const [uuid, setUuid] = useState<string>()
+
+  useEffect(() => {
+    setUuid(uuidv4())
+  }, [])
+
   return (
-    <Section>
-      <Container>
-        <Head>
-          <title>Input Experiment</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Title>Input Experiment</Title>
-      </Container>
-    </Section>
+    <>
+      <Title>Input Experiment</Title>
+      <Link href={`/${uuid}`} passHref>
+        <Button as="a">Begin</Button>
+      </Link>
+    </>
   )
 }
+
+export default Home
