@@ -1,18 +1,21 @@
-import { useEvent, usePresenceChannel } from '@harelpls/use-pusher'
 import { useRouter } from 'next/router'
 import { Title } from 'rbx'
-import React, { FC, useEffect, useState } from 'react'
+import React, { FunctionComponent, useMemo } from 'react'
 import { ChannelView } from '@/components/channel-view'
 
-const Home: FC = () => {
+const Home: FunctionComponent = () => {
   const router = useRouter()
   const { channelId } = router.query as { channelId: string }
+  const body = useMemo(() => channelId
+    ? <ChannelView id={channelId} />
+    : <p>Loading...</p>,
+    [channelId]
+  )
 
-  if (!channelId) return <p>Loading...</p>
   return (
     <>
       <Title>Input Experiment</Title>
-      <ChannelView id={channelId} />
+      { body }
     </>
   )
 }

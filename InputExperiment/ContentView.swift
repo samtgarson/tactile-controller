@@ -7,14 +7,23 @@
 
 import SwiftUI
 
+enum Screen {
+    case scan
+    case input(String)
+}
+
 struct ContentView: View {
-    var body: some View {
-        Button("Send message") { sendMessage() }
-    }
+    @State var screen: Screen = .scan
     
-    private func sendMessage() {
-        let uuid = UUID().uuidString
-        print(uuid)
+    var body: some View {
+        NavigationView {
+            switch screen {
+            case .scan:
+                ScanScreen { id in screen = .input(id) }
+            case .input(let id):
+                InputScreen(id: id)
+            }
+        }
     }
 }
 
