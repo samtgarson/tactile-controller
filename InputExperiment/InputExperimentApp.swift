@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let Config = Configuration.read()
+
 @main
 struct InputExperimentApp: App {
     var body: some Scene {

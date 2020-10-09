@@ -39,6 +39,7 @@ const authorize = async (channelId: string, role: string) => {
 }
 
 const handler: NextApiHandler = async (req, res) => {
+  console.log(`${req.method} /auth ${JSON.stringify(req.body)}`)
   const socketId = req.body.socket_id
   const channel = req.body.channel_name
   const role = req.headers['x-role'] === 'interface' ? Role.Interface : Role.Input
@@ -46,6 +47,7 @@ const handler: NextApiHandler = async (req, res) => {
   const canJoin = await authorize(channel, role)
 
   if (!canJoin) {
+    console.log(`Failed to authenticate for channel ${channel}`)
     res.statusCode = 401
     return res.send({ error: 'Not Authorized' })
   }
@@ -54,6 +56,7 @@ const handler: NextApiHandler = async (req, res) => {
   const channelData = { user_id: user.encodedId, user_info: { role } }
 
   const auth = pusher.authenticate(socketId, channel, channelData)
+  console.log(`Authenticated for channel ${channel}`)
   res.statusCode = 200
   res.send(auth)
 }

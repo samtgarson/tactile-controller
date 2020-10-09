@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import PusherSwift
 
 struct InputScreen: View {
+    internal init(id: String) {
+        self.id = id
+        self.channel = pusherClient.subscribe(to: "presence-\(id)")
+    }
+    
     var id: String
     
     var body: some View {
         Text(id)
     }
+    
+    private let pusherClient = PusherClient()
+    private var channel: PusherChannel
 }
 
 struct InputView_Previews: PreviewProvider {

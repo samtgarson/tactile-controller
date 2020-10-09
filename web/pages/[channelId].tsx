@@ -6,7 +6,7 @@ import { ChannelView } from '@/components/channel-view'
 const Home: FunctionComponent = () => {
   const router = useRouter()
   const { channelId } = router.query as { channelId: string }
-  const body = useMemo(() => channelId
+  const pageContent = useMemo(() => channelId
     ? <ChannelView id={channelId} />
     : <p>Loading...</p>,
     [channelId]
@@ -15,7 +15,7 @@ const Home: FunctionComponent = () => {
   return (
     <>
       <Title>Input Experiment</Title>
-      { body }
+      { pageContent }
     </>
   )
 }
