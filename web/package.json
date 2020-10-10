@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "@harelpls/use-pusher": "^7.1.0",
+    "axios": "^0.20.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
     "next": "9.5.3",
     "pify": "^5.0.0",
     "pusher": "^3.0.1",
@@ -21,6 +24,8 @@
   },
   "devDependencies": {
     "@samtgarson/eslint-config": "^2.3.1",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/morgan": "^1.9.1",
     "@types/node": "^14.11.5",
     "@types/pify": "^3.0.2",
     "@types/react": "^16.9.51",
@@ -39,6 +44,15 @@
       "@samtgarson/eslint-config",
       "@samtgarson/eslint-config/typescript",
       "@samtgarson/eslint-config/react"
-    ]
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": 0,
+      "@typescript-eslint/no-unused-vars": 0,
+      "@typescript-eslint/no-unused-vars-experimental": 1,
+      "@typescript-eslint/no-non-null-assertion": 0
+    }
   }
 }

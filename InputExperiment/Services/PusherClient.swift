@@ -10,13 +10,14 @@ import PusherSwift
 
 class PusherClient {
     private var client: Pusher
-    private let clientOptions = PusherClientOptions(
-        authMethod: .endpoint(authEndpoint: Config.pusherAuthEndpoint),
-        host: .cluster(Config.pusherCluster)
-    )
     
-    init() {
-        client = Pusher(key: Config.pusherKey, options: clientOptions)
+    init(token: String) {
+        let options = PusherClientOptions(
+            authMethod: .authRequestBuilder(authRequestBuilder: PusherAuthorizer(token)),
+            host: .cluster(Config.pusherCluster)
+        )
+        
+        client = Pusher(key: Config.pusherKey, options: options)
         client.connect()
         
         #if DEBUG

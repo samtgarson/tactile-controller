@@ -19,6 +19,9 @@
 		223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB772529CEC40096EF54 /* Assets.xcassets */; };
 		223ACB7B2529CEC40096EF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */; };
 		223ACB862529CEC40096EF54 /* InputExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB852529CEC40096EF54 /* InputExperimentTests.swift */; };
+		2265CA752531082900694C05 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2265CA742531082900694C05 /* Alamofire */; };
+		2265CA79253108B300694C05 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA78253108B300694C05 /* UserService.swift */; };
+		2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,8 @@
 		223ACB812529CEC40096EF54 /* InputExperimentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputExperimentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB852529CEC40096EF54 /* InputExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentTests.swift; sourceTree = "<group>"; };
 		223ACB872529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2265CA78253108B300694C05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherAuthorizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2265CA752531082900694C05 /* Alamofire in Frameworks */,
 				220609C5252E197A0020834F /* CodeScanner in Frameworks */,
 				220609DD252F5F3F0020834F /* PusherSwift in Frameworks */,
 			);
@@ -82,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				220609E1252F5FAD0020834F /* PusherClient.swift */,
+				2265CA78253108B300694C05 /* UserService.swift */,
+				2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 			packageProductDependencies = (
 				220609C4252E197A0020834F /* CodeScanner */,
 				220609DC252F5F3F0020834F /* PusherSwift */,
+				2265CA742531082900694C05 /* Alamofire */,
 			);
 			productName = InputExperiment;
 			productReference = 223ACB702529CEC30096EF54 /* InputExperiment.app */;
@@ -218,6 +227,7 @@
 			packageReferences = (
 				220609C3252E197A0020834F /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				220609DB252F5F3F0020834F /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */,
+				2265CA732531082900694C05 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 223ACB712529CEC30096EF54 /* Products */;
 			projectDirPath = "";
@@ -254,10 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2265CA79253108B300694C05 /* UserService.swift in Sources */,
 				220609D8252F45960020834F /* InputScreen.swift in Sources */,
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
 				220609E2252F5FAD0020834F /* PusherClient.swift in Sources */,
 				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
+				2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,
 			);
@@ -535,6 +547,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		2265CA732531082900694C05 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -547,6 +567,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 220609DB252F5F3F0020834F /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */;
 			productName = PusherSwift;
+		};
+		2265CA742531082900694C05 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2265CA732531082900694C05 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

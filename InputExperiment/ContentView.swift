@@ -8,23 +8,38 @@
 import SwiftUI
 
 enum Screen {
+    case loading
     case scan
     case input(String)
 }
 
 struct ContentView: View {
-    @State var screen: Screen = .scan
+    @State var channel: String?
+    @ObservedObject var userService = UserService()
     
     var body: some View {
         NavigationView {
-            switch screen {
-            case .scan:
-                ScanScreen { id in screen = .input(id) }
-            case .input(let id):
-                InputScreen(id: id)
+            if let channel = channel, let token = userService.token {
+                InputScreen(id: channel, token: token)
+            } else if userService.token == nil {
+                loader
+            } else {
+                ScanScreen { id in channel = id }
             }
         }
     }
+    
+    private var loader: some View {
+        VStack(alignment: .center) {
+            Spacer()
+            ProgressView()
+            Spacer()
+        }
+    }
+    
+//    private var screen: Screen {
+//
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {

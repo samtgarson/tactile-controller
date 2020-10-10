@@ -18,7 +18,6 @@ export const ChannelView: FunctionComponent<ChannelViewProps> = ({ id }) => {
   useEvent(channel, 'pusher:subscription_succeeded', () => setConnected(true))
 
   useEffect(() => {
-    console.log('MEMBERS', members)
     if (members && Object.keys(members).length > 1) setJoined(true)
     else setJoined(false)
   }, [members])

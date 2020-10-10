@@ -6,9 +6,9 @@
 	<string>b107da4fc65ebbd81a0c</string>
 	<key>pusherCluster</key>
 	<string>eu</string>
-	<key>pusherAppId</key>
-	<string>1086515</string>
 	<key>pusherAuthEndpoint</key>
 	<string>http://localhost:3000/api/auth</string>
+	<key>usersEndpoint</key>
+	<string>http://localhost:3000/api/users</string>
 </dict>
 </plist>

@@ -8,10 +8,10 @@
 import Foundation
 
 public struct Configuration: Codable {
-    public let pusherAppId: String
-    public let pusherKey: String
-    public let pusherCluster: String
-    public let pusherAuthEndpoint: String
+    let pusherKey: String
+    let pusherCluster: String
+    let pusherAuthEndpoint: String
+    let usersEndpoint: String
     
     static func read() -> Configuration {
         guard let configFileName = ProcessInfo.processInfo.environment["CONFIG_FILE"],

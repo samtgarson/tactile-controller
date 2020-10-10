@@ -1,4 +1,7 @@
 import { v4 as uuid } from 'uuid'
+import jwt from 'jsonwebtoken'
+
+const SECRET = process.env.SECRET_KEY!
 
 export class User {
   public role: string
@@ -9,13 +12,22 @@ export class User {
     this.id = id
   }
 
-  static fromPusher ({ id: encodedId }: { id: string }): User {
-    const { id, role } = JSON.parse(Buffer.from(encodedId, 'base64').toString('ascii'))
-    return new User(role, id)
+  static fromToken (token: string) {
+    try {
+      const { id, role } = jwt.verify(token, SECRET) as { id: string, role: string }
+      return new User(role, id)
+    } catch (err) {
+      return
+    }
   }
 
-  get encodedId (): string {
+  get token () {
     const { id, role } = this
-    return Buffer.from(JSON.stringify({ id, role })).toString('base64')
+    return jwt.sign({ id, role }, SECRET)
+  }
+
+  get toJSON () {
+    const { token, id, role } = this
+    return { token, id, role }
   }
 }
