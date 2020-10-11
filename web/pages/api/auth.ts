@@ -12,7 +12,6 @@ const unauthorized = (res: NextApiResponse, detail?: string) => {
 const handler: NextApiHandler = async (req, res) => {
   await logger(req, res)
   const { socket_id: socketId, channel_name: channel } = req.body
-  console.log({ socketId, channel })
   const { authorization: token } = req.headers as { authorization?: string }
 
   if (!token) return unauthorized(res, 'Missing auth token')

@@ -22,6 +22,8 @@
 		2265CA752531082900694C05 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2265CA742531082900694C05 /* Alamofire */; };
 		2265CA79253108B300694C05 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA78253108B300694C05 /* UserService.swift */; };
 		2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */; };
+		2291EF1125322CF40042E72F /* MotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF1025322CF40042E72F /* MotionService.swift */; };
+		2291EF1525324FE00042E72F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF1425324FE00042E72F /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		223ACB872529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265CA78253108B300694C05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherAuthorizer.swift; sourceTree = "<group>"; };
+		2291EF1025322CF40042E72F /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
+		2291EF1425324FE00042E72F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				220609E1252F5FAD0020834F /* PusherClient.swift */,
 				2265CA78253108B300694C05 /* UserService.swift */,
 				2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */,
+				2291EF1025322CF40042E72F /* MotionService.swift */,
+				2291EF1425324FE00042E72F /* Message.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
 				220609E2252F5FAD0020834F /* PusherClient.swift in Sources */,
 				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
+				2291EF1125322CF40042E72F /* MotionService.swift in Sources */,
 				2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */,
+				2291EF1525324FE00042E72F /* Message.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,
 			);

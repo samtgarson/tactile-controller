@@ -9,7 +9,7 @@ import Foundation
 import PusherSwift
 
 class PusherClient {
-    private var client: Pusher
+    var client: Pusher
     
     init(token: String) {
         let options = PusherClientOptions(
@@ -24,12 +24,9 @@ class PusherClient {
         client.delegate = self
         #endif
     }
-    
-    func subscribe(to channelName: String) -> PusherChannel {
-        return client.subscribe(channelName)
-    }
 }
 
+#if DEBUG
 extension PusherClient: PusherDelegate {
     func changedConnectionState(from old: ConnectionState, to new: ConnectionState) {
         print("old: \(old.stringValue()) -> new: \(new.stringValue())")
@@ -47,3 +44,4 @@ extension PusherClient: PusherDelegate {
         print("Failed to subscribe to channel \(name)")
     }
 }
+#endif

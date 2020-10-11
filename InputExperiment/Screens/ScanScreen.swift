@@ -16,7 +16,11 @@ struct ScanScreen: View {
     var body: some View {
         Button("Scan") { showScanner() }
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "d94679b9-0784-44e5-9f05-2ad06b101acc", completion: self.handleScan)
+                CodeScannerView(
+                    codeTypes: [.qr],
+                    simulatedData: "input-experiment|d94679b9-0784-44e5-9f05-2ad06b101acc",
+                    completion: self.handleScan
+                )
             }.navigationBarTitle("Input Experiment")
     }
     
@@ -26,9 +30,12 @@ struct ScanScreen: View {
     
     private func handleScan(result: Result<String, CodeScannerView.ScanError>) {
         switch result {
-        case .success(let id):
+        case .success(let code):
+            let parts = code.split(separator: "|")
+            guard parts[0] == "input-experiment", parts.count == 2 else { return }
+            
             self.isShowingScanner = false
-            done(id)
+            done("\(parts[1])")
         case .failure(let error):
             dump(error)
         }
