@@ -24,6 +24,11 @@
 		2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */; };
 		2291EF1125322CF40042E72F /* MotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF1025322CF40042E72F /* MotionService.swift */; };
 		2291EF1525324FE00042E72F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF1425324FE00042E72F /* Message.swift */; };
+		2291EF1A25331D120042E72F /* InputSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF1925331D120042E72F /* InputSurface.swift */; };
+		2291EF2125331D5F0042E72F /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF2025331D5F0042E72F /* Coordinate.swift */; };
+		2291EF2725331D740042E72F /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF2625331D740042E72F /* InputState.swift */; };
+		2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF2C253338BC0042E72F /* PauseButton.swift */; };
+		2291EF33253376F40042E72F /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF32253376F40042E72F /* Grid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,11 @@
 		2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherAuthorizer.swift; sourceTree = "<group>"; };
 		2291EF1025322CF40042E72F /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
 		2291EF1425324FE00042E72F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2291EF1925331D120042E72F /* InputSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSurface.swift; sourceTree = "<group>"; };
+		2291EF2025331D5F0042E72F /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		2291EF2625331D740042E72F /* InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputState.swift; sourceTree = "<group>"; };
+		2291EF2C253338BC0042E72F /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
+		2291EF32253376F40042E72F /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,6 @@
 				2265CA78253108B300694C05 /* UserService.swift */,
 				2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */,
 				2291EF1025322CF40042E72F /* MotionService.swift */,
-				2291EF1425324FE00042E72F /* Message.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -131,6 +140,8 @@
 		223ACB722529CEC30096EF54 /* InputExperiment */ = {
 			isa = PBXGroup;
 			children = (
+				2291EF1F25331D490042E72F /* Models */,
+				2291EF1825331D060042E72F /* Components */,
 				220609F22530674C0020834F /* Config */,
 				220609E0252F5F980020834F /* Services */,
 				220609C8252F42760020834F /* Screens */,
@@ -158,6 +169,26 @@
 				223ACB872529CEC40096EF54 /* Info.plist */,
 			);
 			path = InputExperimentTests;
+			sourceTree = "<group>";
+		};
+		2291EF1825331D060042E72F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2291EF1925331D120042E72F /* InputSurface.swift */,
+				2291EF2C253338BC0042E72F /* PauseButton.swift */,
+				2291EF32253376F40042E72F /* Grid.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2291EF1F25331D490042E72F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2291EF1425324FE00042E72F /* Message.swift */,
+				2291EF2025331D5F0042E72F /* Coordinate.swift */,
+				2291EF2625331D740042E72F /* InputState.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,13 +303,18 @@
 			files = (
 				2265CA79253108B300694C05 /* UserService.swift in Sources */,
 				220609D8252F45960020834F /* InputScreen.swift in Sources */,
+				2291EF2725331D740042E72F /* InputState.swift in Sources */,
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
 				220609E2252F5FAD0020834F /* PusherClient.swift in Sources */,
 				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
+				2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */,
 				2291EF1125322CF40042E72F /* MotionService.swift in Sources */,
+				2291EF33253376F40042E72F /* Grid.swift in Sources */,
 				2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */,
+				2291EF1A25331D120042E72F /* InputSurface.swift in Sources */,
 				2291EF1525324FE00042E72F /* Message.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
+				2291EF2125331D5F0042E72F /* Coordinate.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

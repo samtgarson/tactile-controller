@@ -18,14 +18,14 @@ struct ContentView: View {
     @ObservedObject var userService = UserService()
     
     var body: some View {
-        NavigationView {
-            if let channel = channel, let token = userService.token {
-                InputScreen(id: channel, token: token)
-            } else if userService.token == nil {
-                loader
-            } else {
-                ScanScreen { id in channel = id }
+        if let channel = channel, let token = userService.token {
+            InputScreen(id: channel, token: token) {
+                self.channel = nil
             }
+        } else if userService.token != nil {
+            ScanScreen { id in channel = id }
+        } else {
+            loader
         }
     }
     
@@ -36,10 +36,6 @@ struct ContentView: View {
             Spacer()
         }
     }
-    
-//    private var screen: Screen {
-//
-//    }
 }
 
 struct ContentView_Previews: PreviewProvider {

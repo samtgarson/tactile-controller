@@ -9,14 +9,8 @@ import Foundation
 import CoreMotion
 
 class Message: Codable {
-    var rotation: Vector?
-    var acceleration: Vector??
-    
-    struct Vector: Codable {
-        var x: Double
-        var y: Double
-        var z: Double
-    }
+    var rotation: Coordinate?
+    var acceleration: Coordinate?
     
     init(motionData: CMDeviceMotion?) {
         if let motionData = motionData {
@@ -35,11 +29,11 @@ class Message: Codable {
     }
     
     private func addAttitude(_ attitude: CMAttitude) {
-        self.rotation = Vector(x: attitude.pitch, y: attitude.roll, z: attitude.yaw)
+        self.rotation = Coordinate(x: attitude.pitch, y: attitude.roll, z: attitude.yaw)
     }
     
     private func addAcceleration(_ acceleration: CMAcceleration, _ gravity: CMAcceleration) {
-        self.acceleration = Vector(
+        self.acceleration = Coordinate(
             x: acceleration.x + gravity.x,
             y: acceleration.y + gravity.y,
             z: acceleration.z + gravity.z
