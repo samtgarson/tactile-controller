@@ -50,6 +50,7 @@
 		22060A1325306EA40020834F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		22060A1725307A8F0020834F /* Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		22060A1B25307AF20020834F /* Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
+		2213F4B525344FCE00581A7B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		223ACB702529CEC30096EF54 /* TactileController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactileController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB732529CEC30096EF54 /* InputExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentApp.swift; sourceTree = "<group>"; };
 		223ACB752529CEC30096EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		223ACB672529CEC30096EF54 = {
 			isa = PBXGroup;
 			children = (
+				2213F4B525344FCE00581A7B /* README.md */,
 				223ACB722529CEC30096EF54 /* TactileController */,
 				223ACB842529CEC40096EF54 /* TactileControllerTests */,
 				223ACB712529CEC30096EF54 /* Products */,
