@@ -7,8 +7,8 @@
 	<key>pusherCluster</key>
 	<string>eu</string>
 	<key>pusherAuthEndpoint</key>
-	<string></string>
+	<string>https://tactile-controller.samgarson.com/api/auth</string>
 	<key>usersEndpoint</key>
-	<string></string>
+	<string>https://tactile-controller.samgarson.com/api/users</string>
 </dict>
 </plist>

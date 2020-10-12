@@ -18,6 +18,7 @@ class PusherAuthorizer: AuthRequestBuilderProtocol {
     func requestFor(socketID: String, channelName: String) -> URLRequest? {
         var request = URLRequest(url: URL(string: Config.pusherAuthEndpoint)!)
         request.httpMethod = "POST"
+        request.timeoutInterval = 5
         
         let body = try! JSONSerialization.data(withJSONObject: [ "socket_id": socketID, "channel_name": channelName ])
         request.httpBody = body

@@ -1,5 +1,5 @@
 //
-//  Vector.swift
+//  Coordinate.swift
 //  InputExperiment
 //
 //  Created by Sam Garson on 11/10/2020.

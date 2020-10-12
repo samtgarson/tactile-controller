@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223ACB6F2529CEC30096EF54"
-               BuildableName = "InputExperiment.app"
-               BlueprintName = "InputExperiment"
-               ReferencedContainer = "container:InputExperiment.xcodeproj">
+               BuildableName = "TactileController.app"
+               BlueprintName = "TactileController"
+               ReferencedContainer = "container:TactileController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "223ACB802529CEC40096EF54"
-               BuildableName = "InputExperimentTests.xctest"
-               BlueprintName = "InputExperimentTests"
-               ReferencedContainer = "container:InputExperiment.xcodeproj">
+               BuildableName = "TactileControllerTests.xctest"
+               BlueprintName = "TactileControllerTests"
+               ReferencedContainer = "container:TactileController.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "223ACB6F2529CEC30096EF54"
-            BuildableName = "InputExperiment.app"
-            BlueprintName = "InputExperiment"
-            ReferencedContainer = "container:InputExperiment.xcodeproj">
+            BuildableName = "TactileController.app"
+            BlueprintName = "TactileController"
+            ReferencedContainer = "container:TactileController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "223ACB6F2529CEC30096EF54"
-            BuildableName = "InputExperiment.app"
-            BlueprintName = "InputExperiment"
-            ReferencedContainer = "container:InputExperiment.xcodeproj">
+            BuildableName = "TactileController.app"
+            BlueprintName = "TactileController"
+            ReferencedContainer = "container:TactileController.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

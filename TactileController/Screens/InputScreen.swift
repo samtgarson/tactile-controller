@@ -40,16 +40,17 @@ struct InputScreen: View {
     }
     
     private func createMessage() -> String {
-        return Message(motionData: motion.motionData).encode()
+        return Message(
+            motionData: motion.motionData,
+            touches: Array(inputState.points.values)
+        ).encode()
     }
 }
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            InputScreen(id: "d94679b9-0784-44e5-9f05-2ad06b101acc", token: "token") {
-                print("Back!")
-            }
+        InputScreen(id: "d94679b9-0784-44e5-9f05-2ad06b101acc", token: "token") {
+            print("Back!")
         }
         .preferredColorScheme(.dark)
     }

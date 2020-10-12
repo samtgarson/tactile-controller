@@ -11,8 +11,11 @@ import CoreMotion
 class Message: Codable {
     var rotation: Coordinate?
     var acceleration: Coordinate?
+    var touches: [Touch]
     
-    init(motionData: CMDeviceMotion?) {
+    init(motionData: CMDeviceMotion?, touches: [Touch] = []) {
+        self.touches = touches
+        
         if let motionData = motionData {
             addAttitude(motionData.attitude)
             addAcceleration(motionData.userAcceleration, motionData.gravity)

@@ -29,6 +29,8 @@
 		2291EF2725331D740042E72F /* InputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF2625331D740042E72F /* InputState.swift */; };
 		2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF2C253338BC0042E72F /* PauseButton.swift */; };
 		2291EF33253376F40042E72F /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF32253376F40042E72F /* Grid.swift */; };
+		2291EF37253379EB0042E72F /* TouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF36253379EB0042E72F /* TouchableView.swift */; };
+		2291EF412533A1030042E72F /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF402533A1030042E72F /* Touch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,13 +50,13 @@
 		22060A1325306EA40020834F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		22060A1725307A8F0020834F /* Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		22060A1B25307AF20020834F /* Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
-		223ACB702529CEC30096EF54 /* InputExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		223ACB702529CEC30096EF54 /* TactileController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactileController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB732529CEC30096EF54 /* InputExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentApp.swift; sourceTree = "<group>"; };
 		223ACB752529CEC30096EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		223ACB772529CEC40096EF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		223ACB7C2529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		223ACB812529CEC40096EF54 /* InputExperimentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InputExperimentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		223ACB812529CEC40096EF54 /* TactileControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactileControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB852529CEC40096EF54 /* InputExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentTests.swift; sourceTree = "<group>"; };
 		223ACB872529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2265CA78253108B300694C05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -66,6 +68,8 @@
 		2291EF2625331D740042E72F /* InputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputState.swift; sourceTree = "<group>"; };
 		2291EF2C253338BC0042E72F /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
 		2291EF32253376F40042E72F /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		2291EF36253379EB0042E72F /* TouchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableView.swift; sourceTree = "<group>"; };
+		2291EF402533A1030042E72F /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,8 @@
 		223ACB672529CEC30096EF54 = {
 			isa = PBXGroup;
 			children = (
-				223ACB722529CEC30096EF54 /* InputExperiment */,
-				223ACB842529CEC40096EF54 /* InputExperimentTests */,
+				223ACB722529CEC30096EF54 /* TactileController */,
+				223ACB842529CEC40096EF54 /* TactileControllerTests */,
 				223ACB712529CEC30096EF54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,13 +135,13 @@
 		223ACB712529CEC30096EF54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				223ACB702529CEC30096EF54 /* InputExperiment.app */,
-				223ACB812529CEC40096EF54 /* InputExperimentTests.xctest */,
+				223ACB702529CEC30096EF54 /* TactileController.app */,
+				223ACB812529CEC40096EF54 /* TactileControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		223ACB722529CEC30096EF54 /* InputExperiment */ = {
+		223ACB722529CEC30096EF54 /* TactileController */ = {
 			isa = PBXGroup;
 			children = (
 				2291EF1F25331D490042E72F /* Models */,
@@ -151,7 +155,7 @@
 				223ACB7C2529CEC40096EF54 /* Info.plist */,
 				223ACB792529CEC40096EF54 /* Preview Content */,
 			);
-			path = InputExperiment;
+			path = TactileController;
 			sourceTree = "<group>";
 		};
 		223ACB792529CEC40096EF54 /* Preview Content */ = {
@@ -162,13 +166,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		223ACB842529CEC40096EF54 /* InputExperimentTests */ = {
+		223ACB842529CEC40096EF54 /* TactileControllerTests */ = {
 			isa = PBXGroup;
 			children = (
 				223ACB852529CEC40096EF54 /* InputExperimentTests.swift */,
 				223ACB872529CEC40096EF54 /* Info.plist */,
 			);
-			path = InputExperimentTests;
+			path = TactileControllerTests;
 			sourceTree = "<group>";
 		};
 		2291EF1825331D060042E72F /* Components */ = {
@@ -177,6 +181,7 @@
 				2291EF1925331D120042E72F /* InputSurface.swift */,
 				2291EF2C253338BC0042E72F /* PauseButton.swift */,
 				2291EF32253376F40042E72F /* Grid.swift */,
+				2291EF36253379EB0042E72F /* TouchableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				2291EF1425324FE00042E72F /* Message.swift */,
 				2291EF2025331D5F0042E72F /* Coordinate.swift */,
 				2291EF2625331D740042E72F /* InputState.swift */,
+				2291EF402533A1030042E72F /* Touch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		223ACB6F2529CEC30096EF54 /* InputExperiment */ = {
+		223ACB6F2529CEC30096EF54 /* TactileController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 223ACB952529CEC40096EF54 /* Build configuration list for PBXNativeTarget "InputExperiment" */;
+			buildConfigurationList = 223ACB952529CEC40096EF54 /* Build configuration list for PBXNativeTarget "TactileController" */;
 			buildPhases = (
 				223ACB6C2529CEC30096EF54 /* Sources */,
 				223ACB6D2529CEC30096EF54 /* Frameworks */,
@@ -206,19 +212,19 @@
 			);
 			dependencies = (
 			);
-			name = InputExperiment;
+			name = TactileController;
 			packageProductDependencies = (
 				220609C4252E197A0020834F /* CodeScanner */,
 				220609DC252F5F3F0020834F /* PusherSwift */,
 				2265CA742531082900694C05 /* Alamofire */,
 			);
 			productName = InputExperiment;
-			productReference = 223ACB702529CEC30096EF54 /* InputExperiment.app */;
+			productReference = 223ACB702529CEC30096EF54 /* TactileController.app */;
 			productType = "com.apple.product-type.application";
 		};
-		223ACB802529CEC40096EF54 /* InputExperimentTests */ = {
+		223ACB802529CEC40096EF54 /* TactileControllerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 223ACB982529CEC40096EF54 /* Build configuration list for PBXNativeTarget "InputExperimentTests" */;
+			buildConfigurationList = 223ACB982529CEC40096EF54 /* Build configuration list for PBXNativeTarget "TactileControllerTests" */;
 			buildPhases = (
 				223ACB7D2529CEC40096EF54 /* Sources */,
 				223ACB7E2529CEC40096EF54 /* Frameworks */,
@@ -229,9 +235,9 @@
 			dependencies = (
 				223ACB832529CEC40096EF54 /* PBXTargetDependency */,
 			);
-			name = InputExperimentTests;
+			name = TactileControllerTests;
 			productName = InputExperimentTests;
-			productReference = 223ACB812529CEC40096EF54 /* InputExperimentTests.xctest */;
+			productReference = 223ACB812529CEC40096EF54 /* TactileControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 223ACB6B2529CEC30096EF54 /* Build configuration list for PBXProject "InputExperiment" */;
+			buildConfigurationList = 223ACB6B2529CEC30096EF54 /* Build configuration list for PBXProject "TactileController" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,8 +276,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				223ACB6F2529CEC30096EF54 /* InputExperiment */,
-				223ACB802529CEC40096EF54 /* InputExperimentTests */,
+				223ACB6F2529CEC30096EF54 /* TactileController */,
+				223ACB802529CEC40096EF54 /* TactileControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2291EF37253379EB0042E72F /* TouchableView.swift in Sources */,
 				2265CA79253108B300694C05 /* UserService.swift in Sources */,
 				220609D8252F45960020834F /* InputScreen.swift in Sources */,
 				2291EF2725331D740042E72F /* InputState.swift in Sources */,
@@ -315,6 +322,7 @@
 				2291EF1525324FE00042E72F /* Message.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
 				2291EF2125331D5F0042E72F /* Coordinate.swift in Sources */,
+				2291EF412533A1030042E72F /* Touch.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +340,7 @@
 /* Begin PBXTargetDependency section */
 		223ACB832529CEC40096EF54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 223ACB6F2529CEC30096EF54 /* InputExperiment */;
+			target = 223ACB6F2529CEC30096EF54 /* TactileController */;
 			targetProxy = 223ACB822529CEC40096EF54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,16 +407,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"InputExperiment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TactileController/Preview Content\"";
 				DEVELOPMENT_TEAM = SZR99J9ZFT;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = InputExperiment/Info.plist;
+				INFOPLIST_FILE = TactileController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.InputExperiment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.TactileController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,7 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputExperiment.app/InputExperiment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactileController.app/TactileController";
 			};
 			name = Release;
 		};
@@ -504,16 +512,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"InputExperiment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TactileController/Preview Content\"";
 				DEVELOPMENT_TEAM = SZR99J9ZFT;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = InputExperiment/Info.plist;
+				INFOPLIST_FILE = TactileController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.InputExperiment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.TactileController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,14 +546,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InputExperiment.app/InputExperiment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TactileController.app/TactileController";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		223ACB6B2529CEC30096EF54 /* Build configuration list for PBXProject "InputExperiment" */ = {
+		223ACB6B2529CEC30096EF54 /* Build configuration list for PBXProject "TactileController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				223ACB932529CEC40096EF54 /* Debug */,
@@ -554,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		223ACB952529CEC40096EF54 /* Build configuration list for PBXNativeTarget "InputExperiment" */ = {
+		223ACB952529CEC40096EF54 /* Build configuration list for PBXNativeTarget "TactileController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				223ACB962529CEC40096EF54 /* Debug */,
@@ -563,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		223ACB982529CEC40096EF54 /* Build configuration list for PBXNativeTarget "InputExperimentTests" */ = {
+		223ACB982529CEC40096EF54 /* Build configuration list for PBXNativeTarget "TactileControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				223ACB992529CEC40096EF54 /* Debug */,

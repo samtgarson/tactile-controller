@@ -13,7 +13,11 @@ struct InputSurface: View {
     
     var body: some View {
         VStack {
-            Grid()
+            ZStack {
+                TouchableView(state: inputState)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Grid()
+            }
             HStack {
                 backButton
                 Spacer()

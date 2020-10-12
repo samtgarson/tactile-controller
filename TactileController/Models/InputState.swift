@@ -8,12 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Point: Codable {
-    let coordinate: CGPoint
-    let force: Double
-}
-
 class InputState: ObservableObject {
-    @Published var points: [Point] = []
+    @Published var points = [UITouch: Touch]()
     @Published var sending = true
 }
