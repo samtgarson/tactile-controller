@@ -13,7 +13,9 @@ struct Touch: Codable {
     var force: CGFloat
     
     init(from uiTouch: UITouch, with view: UIView) {
-        self.coordinates = uiTouch.location(in: view)
+        let absoluteLocation = uiTouch.location(in: view)
+        let transform = CGAffineTransform(scaleX: 1 / view.frame.width, y: 1 / view.frame.height)
+        self.coordinates = absoluteLocation.applying(transform)
         self.force = uiTouch.force
     }
 }

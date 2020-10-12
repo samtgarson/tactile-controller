@@ -14,6 +14,7 @@
 		220609E2252F5FAD0020834F /* PusherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220609E1252F5FAD0020834F /* PusherClient.swift */; };
 		22060A1425306EA40020834F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22060A1325306EA40020834F /* Config.swift */; };
 		22060A1825307A8F0020834F /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22060A1725307A8F0020834F /* Debug.plist */; };
+		2213F4BB2534698F00581A7B /* InputPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F4BA2534698F00581A7B /* InputPublisher.swift */; };
 		223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB732529CEC30096EF54 /* InputExperimentApp.swift */; };
 		223ACB762529CEC30096EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB752529CEC30096EF54 /* ContentView.swift */; };
 		223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB772529CEC40096EF54 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		22060A1725307A8F0020834F /* Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		22060A1B25307AF20020834F /* Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
 		2213F4B525344FCE00581A7B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2213F4BA2534698F00581A7B /* InputPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPublisher.swift; sourceTree = "<group>"; };
 		223ACB702529CEC30096EF54 /* TactileController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactileController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB732529CEC30096EF54 /* InputExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentApp.swift; sourceTree = "<group>"; };
 		223ACB752529CEC30096EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				2265CA78253108B300694C05 /* UserService.swift */,
 				2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */,
 				2291EF1025322CF40042E72F /* MotionService.swift */,
+				2213F4BA2534698F00581A7B /* InputPublisher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				2291EF2725331D740042E72F /* InputState.swift in Sources */,
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
 				220609E2252F5FAD0020834F /* PusherClient.swift in Sources */,
+				2213F4BB2534698F00581A7B /* InputPublisher.swift in Sources */,
 				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
 				2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */,
 				2291EF1125322CF40042E72F /* MotionService.swift in Sources */,

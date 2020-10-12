@@ -12,9 +12,7 @@ struct InputScreen: View {
     internal init(id: String, token: String, back: @escaping () -> Void) {
         self.id = id
         self.back = back
-        
-        self.client = PusherClient(token: token).client
-        self.channel = client.subscribeToPresenceChannel(channelName: "presence-\(id)")
+        self.publisher = InputPublisher(id: id, token: token)
     }
     
     var id: String
@@ -22,29 +20,16 @@ struct InputScreen: View {
     
     var body: some View {
         InputSurface(inputState: inputState, back: back)
-            .onReceive(timer) { _ in publishMessage() }
+            .onReceive(timer) { _ in publisher.publish(with: inputState) }
             .onDisappear { self.timer.upstream.connect().cancel() }
     }
     
-    @ObservedObject private var inputState = InputState()
-    private var channel: PusherChannel
-    private var client: Pusher
-    private let motion = MotionService()
+    private var inputState = InputState()
+    private var publisher: InputPublisher
+    
     private let timer = Timer
         .publish(every: 0.125, tolerance: 0.025, on: .main, in: .common)
         .autoconnect()
-    
-    private func publishMessage() {
-        guard inputState.sending, channel.subscribed else { return }
-        channel.trigger(eventName: "client-update", data: createMessage())
-    }
-    
-    private func createMessage() -> String {
-        return Message(
-            motionData: motion.motionData,
-            touches: Array(inputState.points.values)
-        ).encode()
-    }
 }
 
 struct InputView_Previews: PreviewProvider {
