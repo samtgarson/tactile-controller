@@ -13,11 +13,11 @@ class Message: Codable {
     var acceleration: Coordinate?
     var touches: [Touch]
     
-    init(motionData: CMDeviceMotion?, touches: [Touch] = []) {
+    init(motionData: CMDeviceMotion?, touches: [Touch] = [], referenceAttitude: CMAttitude?) {
         self.touches = touches
         
-        if let motionData = motionData {
-            addAttitude(motionData.attitude)
+        if let motionData = motionData, let referenceAttitude = referenceAttitude {
+            addAttitude(motionData.attitude, in: referenceAttitude)
             addAcceleration(motionData.userAcceleration, motionData.gravity)
         }
     }
@@ -31,8 +31,9 @@ class Message: Codable {
         return string
     }
     
-    private func addAttitude(_ attitude: CMAttitude) {
-        self.rotation = Coordinate(x: attitude.pitch, y: attitude.roll, z: attitude.yaw)
+    private func addAttitude(_ attitude: CMAttitude, in reference: CMAttitude) {
+        attitude.multiply(byInverseOf: reference)
+        self.rotation = Coordinate(from: attitude)
     }
     
     private func addAcceleration(_ acceleration: CMAcceleration, _ gravity: CMAcceleration) {
