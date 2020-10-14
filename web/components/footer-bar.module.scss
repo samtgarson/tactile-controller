@@ -1,0 +1,65 @@
+@import '../styles/vars';
+
+$padding: 40px;
+
+.footer {
+  margin: 30px $padding 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: stretch;
+
+  @include small-screen {
+    margin: 30px $padding/2 0 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border-bottom: 1px solid var(--foreground);
+  }
+
+  &::before {
+    left: 0;
+    border-left: 1px solid var(--foreground);
+  }
+
+  &::after {
+    right: -$padding;
+    border-right: 1px solid var(--foreground);
+
+    @include small-screen {
+      right: -$padding / 2;
+    }
+
+  }
+
+  span {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+
+    svg {
+      &:first-child {
+        margin-left: $padding;
+
+        @include small-screen {
+          margin-left: $padding / 2;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      height: 1px;
+      flex: 1 1 auto;
+      background-color: var(--foreground);
+    }
+  }
+}

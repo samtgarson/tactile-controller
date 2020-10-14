@@ -1,0 +1,34 @@
+$dark: #111;
+
+@import "~bulma/bulma";
+@import "~rbx/rbx";
+
+:root {
+  --background: #{$light};
+  --foreground: #{$dark};
+}
+
+[data-theme='dark'] {
+  --background: #{$dark};
+  --foreground: #{$light};
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  min-height: 100vh;
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
