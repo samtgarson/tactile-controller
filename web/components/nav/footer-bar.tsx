@@ -1,6 +1,6 @@
 import React from 'react'
 import { Monitor, Smartphone } from 'react-feather'
-import styles from './footer-bar.module.scss'
+import styles from './nav.module.scss'
 
 export const FooterBar = () => {
   return <footer className={styles.footer}>

@@ -1,16 +1,18 @@
 $dark: #111;
+$text-strong: var(--foreground);
+$title-color: var(--foreground);
 
 @import "~bulma/bulma";
 @import "~rbx/rbx";
 
 :root {
-  --background: #{$light};
+  --background: white;
   --foreground: #{$dark};
 }
 
 [data-theme='dark'] {
   --background: #{$dark};
-  --foreground: #{$light};
+  --foreground: white;
 }
 
 html,
@@ -20,8 +22,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   min-height: 100vh;
+  line-height: 175%;
   color: var(--foreground);
   background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

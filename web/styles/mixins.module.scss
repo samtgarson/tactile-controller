@@ -1,0 +1,18 @@
+@import '~bulma/sass/utilities/mixins';
+@import '~bulma/sass/utilities/animations';
+
+.loader {
+  position: relative;
+
+  &::before {
+    @include loader;
+    margin-right: 10px;
+    display: inline-block;
+    border-left-color: var(--foreground);
+    border-bottom-color: var(--foreground);
+  }
+}
+
+.btnIcon {
+  margin-right: 10px;
+}

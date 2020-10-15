@@ -1,16 +1,17 @@
 /* eslint-disable promise/prefer-await-to-then */
+import { FooterBar } from '@/components/nav/footer-bar'
+import { NavBar } from '@/components/nav/nav-bar'
+import { createPusherConfig } from '@/helpers/create-pusher-config'
+import { fetchUser } from '@/helpers/fetch-user'
+import { PusherProvider } from "@harelpls/use-pusher"
+import { ThemeProvider } from 'next-themes'
+import { AppProps } from 'next/dist/next-server/lib/router/router'
+import Head from 'next/head'
+import Pusher from 'pusher-js'
+import { Container, Section } from 'rbx'
 import React, { useEffect, useMemo, useState } from 'react'
 import '../styles/globals.scss'
-import { PusherProvider } from "@harelpls/use-pusher"
-import Pusher from 'pusher-js'
-import { Section, Container } from 'rbx'
-import Head from 'next/head'
-import { fetchUser } from '@/helpers/fetch-user'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
-import { ThemeProvider } from 'next-themes'
-import { createPusherConfig } from '@/helpers/create-pusher-config'
-import { NavBar } from '@/components/nav-bar'
-import { FooterBar } from '@/components/footer-bar'
+import styles from './app.module.scss'
 
 Pusher.logToConsole = process.env.NODE_ENV !== 'production'
 
@@ -31,8 +32,8 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
       <title>Tactile Controller</title>
     </Head>
     <ThemeProvider defaultTheme="system">
-      <Section style={{ display: 'flex', alignItems: 'stretch', minHeight: '100vh' }}>
-        <Container>
+      <Section className={styles.section}>
+        <Container className={styles.container}>
           <NavBar />
           <Component {...pageProps} />
           <FooterBar />

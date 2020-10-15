@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { Title } from 'rbx'
 import React, { FunctionComponent, useMemo } from 'react'
 import { ChannelView } from '@/components/channel-view'
 
@@ -14,7 +13,6 @@ const Home: FunctionComponent = () => {
 
   return (
     <>
-      <Title>Input Experiment</Title>
       { pageContent }
     </>
   )

@@ -1,12 +1,16 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect, useRef } from 'react'
 import { Canvas } from "react-three-fiber"
 import { Bloom, EffectComposer, SSAO } from 'react-postprocessing'
 import styles from './scene.module.css'
-import { Doughnut } from './dougnut'
+import { Doughnut } from './doughnut'
+import { useTheme } from 'next-themes'
 
 const Scene = () => {
+  const { theme } = useTheme()
+  const themeRef = useRef<string>(theme)
+
   return <div className={styles.scene}>
-    <Canvas shadowMap colorManagement>
+    <Canvas shadowMap>
       <ambientLight intensity={0.4} />
       <directionalLight
         castShadow
@@ -15,7 +19,7 @@ const Scene = () => {
       />
       <pointLight position={[0, -10, 0]} intensity={1} />
       <pointLight position={[0, 10, 10]} intensity={1} />
-      <Doughnut />
+      <Doughnut theme={theme} />
       <Suspense fallback={null}>
         <EffectComposer>
           <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
