@@ -2,7 +2,9 @@ import mixins from '@/styles/mixins.module.scss'
 import { useEvent, usePresenceChannel } from '@harelpls/use-pusher'
 import React, { FunctionComponent, useCallback, useEffect, useState } from 'react'
 import { Intro } from './intro'
-import { Renderer } from './renderer'
+import dynamic from 'next/dynamic'
+
+const Renderer = dynamic(async () => (await import('@/components/interface/renderer')).Renderer, { ssr: false })
 
 type ChannelViewProps = {
   id: string

@@ -61,11 +61,14 @@
       "@typescript-eslint/no-unused-vars": 0,
       "@typescript-eslint/no-unused-vars-experimental": 1,
       "@typescript-eslint/no-non-null-assertion": 0,
-      "import/extensions": ["error", {
-        "js": "never",
-        "json": "always",
-        "scss": "always"
-      }]
+      "import/extensions": [
+        "error",
+        {
+          "js": "never",
+          "json": "always",
+          "scss": "always"
+        }
+      ]
     }
   }
 }

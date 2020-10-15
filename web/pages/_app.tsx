@@ -13,7 +13,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import '../styles/globals.scss'
 import styles from './app.module.scss'
 
-Pusher.logToConsole = process.env.NODE_ENV !== 'production'
+/* Pusher.logToConsole = process.env.NODE_ENV !== 'production' */
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   const [token, setToken] = useState<string>()
