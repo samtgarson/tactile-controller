@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct PauseButton: View {
-    @ObservedObject var state: InputState
+    var playing: Bool
+    var toggle: () -> Void
     @State private var flash = false
     
     var body: some View {
-        return Button(action: { state.sending.toggle() }) {
+        return Button(action: { toggle() }) {
             HStack(alignment: .center) {
                 label
-                if state.sending { icon }
+                if playing { icon }
                 else { pauseIcon }
             }
         }
@@ -51,7 +52,7 @@ struct PauseButton: View {
     }
         
     private var label: some View {
-        Text(state.sending ? "Sending" : "Paused")
+        Text(playing ? "Sending" : "Paused")
             .font(.system(size: 12))
             .fontWeight(.semibold)
             .foregroundColor(.primary)
@@ -70,6 +71,6 @@ struct PauseButton: View {
 struct PauseButton_Previews: PreviewProvider {
     static var previews: some View {
         let state = InputState()
-        return PauseButton(state: state)
+        return PauseButton(playing: state.sending) { state.sending.toggle() }
     }
 }

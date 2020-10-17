@@ -78,10 +78,10 @@ extension TouchableView: TouchableViewDelegate {
     func setTouch(_ touch: UITouch) {
         guard let view = self.view else { return }
         
-        state.points[touch] = Touch(from: touch, with: view)
+        state.touches[touch] = Touch(from: touch, with: view)
     }
     
     func removeTouch(_ touch: UITouch) {
-        state.points.removeValue(forKey: touch)
+        state.touches.removeValue(forKey: touch)
     }
 }

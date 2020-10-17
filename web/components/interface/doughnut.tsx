@@ -23,7 +23,7 @@ export const Doughnut: FC<DoughnutProps> = ({ theme, getRotation }) => {
 
     const newRotation = new Vector3(rawRotation.x, rawRotation.y, rawRotation.z)
     const currentRotation = mesh.current.rotation.toVector3()
-    const targetRotation = currentRotation.add(newRotation.sub(currentRotation).divideScalar(20))
+    const targetRotation = currentRotation.add(newRotation.sub(currentRotation).divideScalar(10))
 
     mesh.current.rotation.setFromVector3(targetRotation)
   })

@@ -19,12 +19,12 @@ struct InputScreen: View {
     var back: () -> Void
     
     var body: some View {
-        InputSurface(inputState: inputState, back: back)
-            .onReceive(timer) { _ in publisher.publish(with: inputState) }
+        InputSurface(state: state, back: back)
+            .onReceive(timer) { _ in publisher.publish(with: state) }
             .onDisappear { self.timer.upstream.connect().cancel() }
     }
     
-    private var inputState = InputState()
+    @ObservedObject var state = InputState()
     private var publisher: InputPublisher
     
     private let timer = Timer

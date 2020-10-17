@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct InputSurface: View {
-    @ObservedObject var inputState: InputState
+    @ObservedObject var state: InputState
     var back: () -> Void
     
     var body: some View {
         VStack {
-            ZStack {
-                TouchableView(state: inputState)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                Grid()
-            }
+            Grid(state: state)
             HStack {
                 backButton
                 Spacer()
-                PauseButton(state: inputState)
+                PauseButton(playing: state.sending) {
+                    state.sending.toggle()
+                }
             }.padding(.vertical)
         }
         .padding(.horizontal, 20)
@@ -39,7 +37,7 @@ struct InputSurface: View {
 struct InputGrid_Previews: PreviewProvider {
     static var previews: some View {
         let state = InputState()
-        InputSurface(inputState: state, back: { print("back!") })
+        InputSurface(state: state, back: { print("back!") })
             .preferredColorScheme(.dark)
     }
 }

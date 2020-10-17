@@ -15,11 +15,14 @@
 		22060A1425306EA40020834F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22060A1325306EA40020834F /* Config.swift */; };
 		22060A1825307A8F0020834F /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22060A1725307A8F0020834F /* Debug.plist */; };
 		2213F4BB2534698F00581A7B /* InputPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F4BA2534698F00581A7B /* InputPublisher.swift */; };
+		22356FBD253B0D96007AC214 /* TouchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22356FBC253B0D96007AC214 /* TouchViewModel.swift */; };
+		22356FC1253B2633007AC214 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22356FC0253B2633007AC214 /* Extensions.swift */; };
 		223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB732529CEC30096EF54 /* InputExperimentApp.swift */; };
 		223ACB762529CEC30096EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB752529CEC30096EF54 /* ContentView.swift */; };
 		223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB772529CEC40096EF54 /* Assets.xcassets */; };
 		223ACB7B2529CEC40096EF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */; };
 		223ACB862529CEC40096EF54 /* InputExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB852529CEC40096EF54 /* InputExperimentTests.swift */; };
+		224E81512538F1BD00121289 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E81502538F1BD00121289 /* TouchView.swift */; };
 		2265CA752531082900694C05 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2265CA742531082900694C05 /* Alamofire */; };
 		2265CA79253108B300694C05 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA78253108B300694C05 /* UserService.swift */; };
 		2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */; };
@@ -53,6 +56,8 @@
 		22060A1B25307AF20020834F /* Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
 		2213F4B525344FCE00581A7B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2213F4BA2534698F00581A7B /* InputPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPublisher.swift; sourceTree = "<group>"; };
+		22356FBC253B0D96007AC214 /* TouchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchViewModel.swift; sourceTree = "<group>"; };
+		22356FC0253B2633007AC214 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		223ACB702529CEC30096EF54 /* TactileController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactileController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB732529CEC30096EF54 /* InputExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentApp.swift; sourceTree = "<group>"; };
 		223ACB752529CEC30096EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		223ACB812529CEC40096EF54 /* TactileControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactileControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		223ACB852529CEC40096EF54 /* InputExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentTests.swift; sourceTree = "<group>"; };
 		223ACB872529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224E81502538F1BD00121289 /* TouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 		2265CA78253108B300694C05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2265CA7C25320B4600694C05 /* PusherAuthorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherAuthorizer.swift; sourceTree = "<group>"; };
 		2291EF1025322CF40042E72F /* MotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionService.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 				223ACB772529CEC40096EF54 /* Assets.xcassets */,
 				223ACB7C2529CEC40096EF54 /* Info.plist */,
 				223ACB792529CEC40096EF54 /* Preview Content */,
+				22356FC0253B2633007AC214 /* Extensions.swift */,
 			);
 			path = TactileController;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 				2291EF2C253338BC0042E72F /* PauseButton.swift */,
 				2291EF32253376F40042E72F /* Grid.swift */,
 				2291EF36253379EB0042E72F /* TouchableView.swift */,
+				224E81502538F1BD00121289 /* TouchView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 				2291EF2025331D5F0042E72F /* Coordinate.swift */,
 				2291EF2625331D740042E72F /* InputState.swift */,
 				2291EF402533A1030042E72F /* Touch.swift */,
+				22356FBC253B0D96007AC214 /* TouchViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,12 +331,15 @@
 				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
 				2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */,
 				2291EF1125322CF40042E72F /* MotionService.swift in Sources */,
+				22356FBD253B0D96007AC214 /* TouchViewModel.swift in Sources */,
 				2291EF33253376F40042E72F /* Grid.swift in Sources */,
 				2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */,
+				22356FC1253B2633007AC214 /* Extensions.swift in Sources */,
 				2291EF1A25331D120042E72F /* InputSurface.swift in Sources */,
 				2291EF1525324FE00042E72F /* Message.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
 				2291EF2125331D5F0042E72F /* Coordinate.swift in Sources */,
+				224E81512538F1BD00121289 /* TouchView.swift in Sources */,
 				2291EF412533A1030042E72F /* Touch.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,
 			);

@@ -22,7 +22,7 @@ class InputPublisher {
         
         let msg = Message(
             motionData: motion.motionData,
-            touches: Array(state.points.values),
+            touches: state.touchArray,
             referenceAttitude: reference
         ).encode()
         

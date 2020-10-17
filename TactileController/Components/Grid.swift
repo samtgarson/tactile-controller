@@ -8,17 +8,43 @@
 import SwiftUI
 
 struct Grid: View {
+    @ObservedObject var state: InputState
+    @State var touches = TouchViewModel.wholeHand()
+    
     var body: some View {
         ZStack {
+            TouchableView(state: state)
+            ForEach(0..<touches.count) { i in
+                TouchView(vm: touches[i])
+            }
             GeometryReader { geo in
                 vertical(geo)
                 horizontal(geo)
             }
             Rectangle().stroke(Color.primary, lineWidth: 1.5)
         }
+        .onReceive(state.touchesPublisher) { touches in updateTouches(touches) }
     }
     
     private let padding: CGFloat = 30
+    
+    private func updateTouches(_ newTouches: [Touch]) {
+        for i in 0...4 {
+            let vm = touches[i]
+            guard i < newTouches.count else {
+                withAnimation { vm.display = false }
+                continue
+            }
+            
+            let newTouch = newTouches[i]
+            vm.x = newTouch.originalCoordinates.x
+            vm.y = newTouch.originalCoordinates.y
+            withAnimation {
+                vm.display = true
+                vm.force = newTouch.force
+            }
+        }
+    }
     
     private func vertical(_ geo: GeometryProxy) -> some View {
         ForEach((1...5), id: \.self) { x in
@@ -50,6 +76,20 @@ struct Grid: View {
 
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        Grid()
+        Preview()
+    }
+    
+    struct Preview: View {
+        @ObservedObject var state = InputState()
+
+        var body: some View {
+            ZStack {
+                TouchableView(state: state)
+                VStack {
+                    Grid(state: state)
+                    Text("\(state.touches.count)")
+                }
+            }
+        }
     }
 }
