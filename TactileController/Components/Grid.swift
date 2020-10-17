@@ -32,17 +32,12 @@ struct Grid: View {
         for i in 0...4 {
             let vm = touches[i]
             guard i < newTouches.count else {
-                withAnimation { vm.display = false }
+                vm.hide()
                 continue
             }
             
-            let newTouch = newTouches[i]
-            vm.x = newTouch.originalCoordinates.x
-            vm.y = newTouch.originalCoordinates.y
-            withAnimation {
-                vm.display = true
-                vm.force = newTouch.force
-            }
+            vm.show()
+            vm.update(from: newTouches[i])
         }
     }
     
