@@ -16,7 +16,7 @@ struct TouchView: View {
     var body: some View {
         if vm.display {
             Circle()
-                .fill(Color(UIColor.systemBackground))
+                .fill(Color(.systemBackground))
                 .overlay(fill)
                 .overlay(dottedBorder)
                 .overlay(dot)

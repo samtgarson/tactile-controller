@@ -35,6 +35,11 @@
 		2291EF33253376F40042E72F /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF32253376F40042E72F /* Grid.swift */; };
 		2291EF37253379EB0042E72F /* TouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF36253379EB0042E72F /* TouchableView.swift */; };
 		2291EF412533A1030042E72F /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291EF402533A1030042E72F /* Touch.swift */; };
+		FA310003259E1CD9009F9C88 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA310002259E1CD9009F9C88 /* BottomSheet.swift */; };
+		FA310007259F2D09009F9C88 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA310006259F2D09009F9C88 /* SizeReader.swift */; };
+		FA31000B259F3735009F9C88 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31000A259F3735009F9C88 /* RoundedButton.swift */; };
+		FA31000F259F3F16009F9C88 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31000E259F3F16009F9C88 /* SmallButton.swift */; };
+		FACF9A74259BBF890024B8AD /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF9A73259BBF890024B8AD /* Scanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		2291EF32253376F40042E72F /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		2291EF36253379EB0042E72F /* TouchableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableView.swift; sourceTree = "<group>"; };
 		2291EF402533A1030042E72F /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
+		FA310002259E1CD9009F9C88 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		FA310006259F2D09009F9C88 /* SizeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeReader.swift; sourceTree = "<group>"; };
+		FA31000A259F3735009F9C88 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FA31000E259F3F16009F9C88 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
+		FACF9A73259BBF890024B8AD /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,11 +200,14 @@
 		2291EF1825331D060042E72F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FACF9A73259BBF890024B8AD /* Scanner.swift */,
 				2291EF1925331D120042E72F /* InputSurface.swift */,
-				2291EF2C253338BC0042E72F /* PauseButton.swift */,
+				FA310012259F3F99009F9C88 /* Buttons */,
 				2291EF32253376F40042E72F /* Grid.swift */,
 				2291EF36253379EB0042E72F /* TouchableView.swift */,
 				224E81502538F1BD00121289 /* TouchView.swift */,
+				FA310002259E1CD9009F9C88 /* BottomSheet.swift */,
+				FA310006259F2D09009F9C88 /* SizeReader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -209,6 +222,16 @@
 				22356FBC253B0D96007AC214 /* TouchViewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FA310012259F3F99009F9C88 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2291EF2C253338BC0042E72F /* PauseButton.swift */,
+				FA31000A259F3735009F9C88 /* RoundedButton.swift */,
+				FA31000E259F3F16009F9C88 /* SmallButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2291EF37253379EB0042E72F /* TouchableView.swift in Sources */,
+				FA31000F259F3F16009F9C88 /* SmallButton.swift in Sources */,
 				2265CA79253108B300694C05 /* UserService.swift in Sources */,
+				FA310003259E1CD9009F9C88 /* BottomSheet.swift in Sources */,
 				220609D8252F45960020834F /* InputScreen.swift in Sources */,
 				2291EF2725331D740042E72F /* InputState.swift in Sources */,
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
@@ -335,10 +360,13 @@
 				2291EF33253376F40042E72F /* Grid.swift in Sources */,
 				2265CA7D25320B4600694C05 /* PusherAuthorizer.swift in Sources */,
 				22356FC1253B2633007AC214 /* Extensions.swift in Sources */,
+				FACF9A74259BBF890024B8AD /* Scanner.swift in Sources */,
 				2291EF1A25331D120042E72F /* InputSurface.swift in Sources */,
+				FA310007259F2D09009F9C88 /* SizeReader.swift in Sources */,
 				2291EF1525324FE00042E72F /* Message.swift in Sources */,
 				220609CA252F428D0020834F /* ScanScreen.swift in Sources */,
 				2291EF2125331D5F0042E72F /* Coordinate.swift in Sources */,
+				FA31000B259F3735009F9C88 /* RoundedButton.swift in Sources */,
 				224E81512538F1BD00121289 /* TouchView.swift in Sources */,
 				2291EF412533A1030042E72F /* Touch.swift in Sources */,
 				22060A1425306EA40020834F /* Config.swift in Sources */,

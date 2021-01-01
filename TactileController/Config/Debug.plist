@@ -7,8 +7,8 @@
 	<key>pusherCluster</key>
 	<string>eu</string>
 	<key>pusherAuthEndpoint</key>
-	<string>http://samgarson-work.local:3000/api/auth</string>
+	<string>http://192.168.0.228:3000/api/auth</string>
 	<key>usersEndpoint</key>
-	<string>http://samgarson-work.local:3000/api/users</string>
+	<string>http://192.168.0.228:3000/api/users</string>
 </dict>
 </plist>
