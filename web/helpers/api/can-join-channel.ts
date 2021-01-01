@@ -4,7 +4,7 @@ import { pusher } from "./pusher-client"
 export const canJoinChannel = async (channel: string, { role, id }: User) => {
   try {
     const res = await pusher.get({ path: `/channels/${channel}/users` })
-    const { users } = JSON.parse(res.body) as PusherResponseBody
+    const { users } = await res.json() as PusherResponseBody
     if (!users) return false
 
     const existing = users
