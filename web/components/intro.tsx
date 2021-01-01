@@ -27,7 +27,7 @@ export const Intro: FunctionComponent<IntroProps> = ({ id }) => {
     { src && <img src={src} /> }
     <p className={`${mixins.loader} ${homeStyles.caption}`}>Scan to connect</p>
     <p className={styles.waiting}>You&apos;ll need the mobile app to continue.</p>
-    <Button.Group>
+    <Button.Group align="centered">
       <Link passHref href="/">
         <Btn>Back</Btn>
       </Link>
