@@ -1,6 +1,6 @@
 //
 //  UserService.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 09/10/2020.
 //

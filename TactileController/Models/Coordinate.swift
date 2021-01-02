@@ -1,6 +1,6 @@
 //
 //  Coordinate.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 11/10/2020.
 //

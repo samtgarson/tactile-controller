@@ -7,7 +7,6 @@ import { PusherProvider } from "@harelpls/use-pusher"
 import { ThemeProvider } from 'next-themes'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
 import Head from 'next/head'
-import Pusher from 'pusher-js'
 import { Container, Section } from 'rbx'
 import React, { useEffect, useMemo, useState } from 'react'
 import '../styles/globals.scss'

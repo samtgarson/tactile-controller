@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 04/10/2020.
 //

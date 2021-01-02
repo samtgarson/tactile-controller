@@ -1,6 +1,6 @@
 //
 //  Scanner.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 29/12/2020.
 //

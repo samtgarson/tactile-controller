@@ -12,12 +12,12 @@
 		220609D8252F45960020834F /* InputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220609D7252F45960020834F /* InputScreen.swift */; };
 		220609DD252F5F3F0020834F /* PusherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 220609DC252F5F3F0020834F /* PusherSwift */; };
 		220609E2252F5FAD0020834F /* PusherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220609E1252F5FAD0020834F /* PusherClient.swift */; };
-		22060A1425306EA40020834F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22060A1325306EA40020834F /* Config.swift */; };
+		22060A1425306EA40020834F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22060A1325306EA40020834F /* Configuration.swift */; };
 		22060A1825307A8F0020834F /* Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22060A1725307A8F0020834F /* Debug.plist */; };
 		2213F4BB2534698F00581A7B /* InputPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2213F4BA2534698F00581A7B /* InputPublisher.swift */; };
 		22356FBD253B0D96007AC214 /* TouchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22356FBC253B0D96007AC214 /* TouchViewModel.swift */; };
 		22356FC1253B2633007AC214 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22356FC0253B2633007AC214 /* Extensions.swift */; };
-		223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB732529CEC30096EF54 /* InputExperimentApp.swift */; };
+		223ACB742529CEC30096EF54 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB732529CEC30096EF54 /* App.swift */; };
 		223ACB762529CEC30096EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB752529CEC30096EF54 /* ContentView.swift */; };
 		223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB772529CEC40096EF54 /* Assets.xcassets */; };
 		223ACB7B2529CEC40096EF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */; };
@@ -39,6 +39,7 @@
 		FA310007259F2D09009F9C88 /* SizeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA310006259F2D09009F9C88 /* SizeReader.swift */; };
 		FA31000B259F3735009F9C88 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31000A259F3735009F9C88 /* RoundedButton.swift */; };
 		FA31000F259F3F16009F9C88 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31000E259F3F16009F9C88 /* SmallButton.swift */; };
+		FA9E601425A0F5CF0014DF45 /* Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22060A1B25307AF20020834F /* Release.plist */; };
 		FACF9A74259BBF890024B8AD /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF9A73259BBF890024B8AD /* Scanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +57,7 @@
 		220609C9252F428D0020834F /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		220609D7252F45960020834F /* InputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScreen.swift; sourceTree = "<group>"; };
 		220609E1252F5FAD0020834F /* PusherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusherClient.swift; sourceTree = "<group>"; };
-		22060A1325306EA40020834F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		22060A1325306EA40020834F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		22060A1725307A8F0020834F /* Debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Debug.plist; sourceTree = "<group>"; };
 		22060A1B25307AF20020834F /* Release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Release.plist; sourceTree = "<group>"; };
 		2213F4B525344FCE00581A7B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -64,7 +65,7 @@
 		22356FBC253B0D96007AC214 /* TouchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchViewModel.swift; sourceTree = "<group>"; };
 		22356FC0253B2633007AC214 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		223ACB702529CEC30096EF54 /* TactileController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TactileController.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		223ACB732529CEC30096EF54 /* InputExperimentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentApp.swift; sourceTree = "<group>"; };
+		223ACB732529CEC30096EF54 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		223ACB752529CEC30096EF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		223ACB772529CEC40096EF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -136,7 +137,7 @@
 		220609F22530674C0020834F /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				22060A1325306EA40020834F /* Config.swift */,
+				22060A1325306EA40020834F /* Configuration.swift */,
 				22060A1B25307AF20020834F /* Release.plist */,
 				22060A1725307A8F0020834F /* Debug.plist */,
 			);
@@ -170,7 +171,7 @@
 				220609F22530674C0020834F /* Config */,
 				220609E0252F5F980020834F /* Services */,
 				220609C8252F42760020834F /* Screens */,
-				223ACB732529CEC30096EF54 /* InputExperimentApp.swift */,
+				223ACB732529CEC30096EF54 /* App.swift */,
 				223ACB752529CEC30096EF54 /* ContentView.swift */,
 				223ACB772529CEC40096EF54 /* Assets.xcassets */,
 				223ACB7C2529CEC40096EF54 /* Info.plist */,
@@ -324,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9E601425A0F5CF0014DF45 /* Release.plist in Resources */,
 				223ACB7B2529CEC40096EF54 /* Preview Assets.xcassets in Resources */,
 				22060A1825307A8F0020834F /* Debug.plist in Resources */,
 				223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */,
@@ -353,7 +355,7 @@
 				223ACB762529CEC30096EF54 /* ContentView.swift in Sources */,
 				220609E2252F5FAD0020834F /* PusherClient.swift in Sources */,
 				2213F4BB2534698F00581A7B /* InputPublisher.swift in Sources */,
-				223ACB742529CEC30096EF54 /* InputExperimentApp.swift in Sources */,
+				223ACB742529CEC30096EF54 /* App.swift in Sources */,
 				2291EF2D253338BC0042E72F /* PauseButton.swift in Sources */,
 				2291EF1125322CF40042E72F /* MotionService.swift in Sources */,
 				22356FBD253B0D96007AC214 /* TouchViewModel.swift in Sources */,
@@ -369,7 +371,7 @@
 				FA31000B259F3735009F9C88 /* RoundedButton.swift in Sources */,
 				224E81512538F1BD00121289 /* TouchView.swift in Sources */,
 				2291EF412533A1030042E72F /* Touch.swift in Sources */,
-				22060A1425306EA40020834F /* Config.swift in Sources */,
+				22060A1425306EA40020834F /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 //
 //  InputState.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 11/10/2020.
 //
@@ -19,11 +19,9 @@ class InputState: ObservableObject {
     @Published var error: String?
     @Published var showError: Bool = false
     
-    private let CONNECTION_ERROR_MESSAGE = "Could not join channel! Are you connected to the internet?"
-    
     func registerPublisher(_ publisher: InputPublisher) {
         publisher.client.on(.receivedError) { [weak self] in self?.setError($0) }
-        publisher.client.on(.failedToSubscribeToChannel) { [weak self] _ in self?.setError(CONNECTION_ERROR_MESSAGE) }
+        publisher.client.on(.failedToSubscribeToChannel) { [weak self] _ in self?.setError("Could not join channel! Are you connected to the internet?") }
     }
     
     func setError(_ error: String?) {

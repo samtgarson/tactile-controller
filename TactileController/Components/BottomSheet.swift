@@ -56,6 +56,7 @@ struct BottomSheetView<Content: View>: View {
                         Text(title).bold()
                     }
                     self.content
+                        .multilineTextAlignment(.center)
                         .padding()
                 }
                 .padding()

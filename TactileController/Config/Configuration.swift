@@ -1,6 +1,6 @@
 //
 //  Config.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 09/10/2020.
 //
@@ -17,7 +17,7 @@ public struct Configuration: Codable {
         guard let configFileName = ProcessInfo.processInfo.environment["CONFIG_FILE"],
               let filePath = Bundle.main.path(forResource: configFileName, ofType: nil),
               let fileData = FileManager.default.contents(atPath: filePath) else {
-            fatalError("Config path not found")
+            fatalError("Config path not found (file name: \(ProcessInfo.processInfo.environment["CONFIG_FILE"] ?? "not provided")")
         }
         
         do {

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import InputExperiment
+@testable import TactileController
 
 class InputExperimentTests: XCTestCase {
 

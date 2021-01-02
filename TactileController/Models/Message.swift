@@ -1,6 +1,6 @@
 //
 //  Message.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 10/10/2020.
 //

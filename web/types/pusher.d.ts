@@ -1,4 +1,4 @@
-type PusherResponseBody = {
+declare type PusherResponseBody = {
   users?: [
     { id: string }
   ]

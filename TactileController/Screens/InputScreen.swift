@@ -1,6 +1,6 @@
 //
 //  InputScreen.swift
-//  InputExperiment
+//  TactileController
 //
 //  Created by Sam Garson on 08/10/2020.
 //
