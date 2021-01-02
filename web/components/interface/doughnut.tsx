@@ -38,6 +38,7 @@ export const Doughnut: FC<DoughnutProps> = ({ theme, getRotation }) => {
       metalness={0.3}
       roughness={0.3}
       ref={material}
+      stencilMask=""
     />
   </Torus>
 }

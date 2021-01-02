@@ -31,7 +31,7 @@ export const Renderer: FunctionComponent<RendererProps> = ({ channel }) => {
       />
       <pointLight position={[0, -10, 0]} intensity={1} />
       <pointLight position={[0, 10, 10]} intensity={1} />
-      <Doughnut theme={theme} getRotation={() => message.current?.rotation} />
+      <Doughnut theme={theme || 'light'} getRotation={() => message.current?.rotation} />
       <Suspense fallback={null}>
         <EffectComposer>
           <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />

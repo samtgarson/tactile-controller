@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 import React from "react"
 
 export const Btn = forwardRefAs<ButtonProps>(({ children, ...props }, ref) => {
-  const { theme } = useTheme()
+  const { theme } = useTheme() as { theme: "light" | "dark" }
 
   return <Button inverted outlined color={theme} {...props} ref={ref}>{ children }</Button>
 }, { as: "button" })
