@@ -16,6 +16,28 @@ class InputState: ObservableObject {
             touchesPublisher.send(touchArray)
         }
     }
+    @Published var error: String?
+    @Published var showError: Bool = false
+    
+    private let CONNECTION_ERROR_MESSAGE = "Could not join channel! Are you connected to the internet?"
+    
+    func registerPublisher(_ publisher: InputPublisher) {
+        publisher.client.on(.receivedError) { [weak self] in self?.setError($0) }
+        publisher.client.on(.failedToSubscribeToChannel) { [weak self] _ in self?.setError(CONNECTION_ERROR_MESSAGE) }
+    }
+    
+    func setError(_ error: String?) {
+        DispatchQueue.main.async {
+            if let error = error {
+                self.error = error
+                self.showError = true
+                self.sending = false
+            } else {
+                self.error = nil
+                self.showError = false
+            }
+        }
+    }
         
     let touchesPublisher = CurrentValueSubject<[Touch], Never>([Touch]())
     

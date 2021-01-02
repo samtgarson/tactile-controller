@@ -17,8 +17,8 @@ class Message: Codable {
         self.touches = touches
         
         if let motionData = motionData, let referenceAttitude = referenceAttitude {
-            addAttitude(motionData.attitude, in: referenceAttitude)
-            addAcceleration(motionData.userAcceleration, motionData.gravity)
+            add(motionData.attitude, in: referenceAttitude)
+            add(motionData.userAcceleration, motionData.gravity)
         }
     }
     
@@ -31,12 +31,12 @@ class Message: Codable {
         return string
     }
     
-    private func addAttitude(_ attitude: CMAttitude, in reference: CMAttitude) {
+    private func add(_ attitude: CMAttitude, in reference: CMAttitude) {
         attitude.multiply(byInverseOf: reference)
         self.rotation = Coordinate(from: attitude)
     }
     
-    private func addAcceleration(_ acceleration: CMAcceleration, _ gravity: CMAcceleration) {
+    private func add(_ acceleration: CMAcceleration, _ gravity: CMAcceleration) {
         self.acceleration = Coordinate(
             x: acceleration.x + gravity.x,
             y: acceleration.y + gravity.y,

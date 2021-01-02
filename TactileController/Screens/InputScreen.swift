@@ -13,6 +13,8 @@ struct InputScreen: View {
         self.id = id
         self.back = back
         self.publisher = InputPublisher(id: id, token: token)
+        
+        state.registerPublisher(publisher)
     }
     
     var id: String
@@ -22,6 +24,15 @@ struct InputScreen: View {
         InputSurface(state: state, back: back)
             .onReceive(timer) { _ in publisher.publish(with: state) }
             .onDisappear { self.timer.upstream.connect().cancel() }
+            .bottomSheet($state.showError, title: "Something went wrong", icon: "exclamationmark.triangle", dismissable: false) {
+                VStack(spacing: 12) {
+                    if let error = state.error { Text(error) }
+                    SmallButton("Try Again", icon: "arrow.left") {
+                        state.setError(nil)
+                        back()
+                    }
+                }
+            }
     }
     
     @ObservedObject var state = InputState()
@@ -34,9 +45,13 @@ struct InputScreen: View {
 
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
-        InputScreen(id: "d94679b9-0784-44e5-9f05-2ad06b101acc", token: "token") {
+        let screen = InputScreen(id: "d94679b9-0784-44e5-9f05-2ad06b101acc", token: "token") {
             print("Back!")
         }
-        .preferredColorScheme(.dark)
+        
+        return VStack {
+            Button("error") { screen.state.setError("Could not join channel!") }
+            screen
+        }
     }
 }

@@ -11,7 +11,7 @@ import CoreMotion
 
 class InputPublisher {
     init(id: String, token: String) {
-        self.client = PusherClient(token: token).client
+        self.client = PusherClient(token: token)
         self.channel = client.subscribeToPresenceChannel(channelName: "presence-\(id)")
     }
 
@@ -29,9 +29,9 @@ class InputPublisher {
         channel.trigger(eventName: "client-update", data: msg)
     }
 
+    var client: PusherClient
     private var referenceAttitude: CMAttitude?
     private var channel: PusherChannel
-    private var client: Pusher
     private let motion = MotionService()
     
     private func setReferenceAttitude() -> CMAttitude? {

@@ -26,7 +26,6 @@ struct SmallButton: View {
             }
             Text(label)
         }
-        .font(.caption)
         .foregroundColor(.primary)
         .padding(.top, 12)
     }
