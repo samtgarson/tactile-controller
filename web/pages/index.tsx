@@ -1,6 +1,5 @@
 import { Btn } from '@/components/btn'
 import Link from 'next/link'
-import { useTheme } from 'next-themes'
 import { Title } from 'rbx'
 import React, { FunctionComponent, useEffect, useMemo, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
@@ -9,7 +8,6 @@ import { Zap } from 'react-feather'
 import mixins from '@/styles/mixins.module.scss'
 
 const Home: FunctionComponent = () => {
-  const { theme } = useTheme()
   const [uuid, setUuid] = useState<string>()
   const [loading, setLoading] = useState(false)
   const btnState = useMemo(() => loading ? 'loading' : undefined, [loading])

@@ -14,7 +14,7 @@ type IntroProps = {
 }
 
 export const Intro: FunctionComponent<IntroProps> = ({ id }) => {
-  const { theme } = useTheme()
+  const { resolvedTheme: theme } = useTheme()
   const qrOptions = useMemo(() => ({
     color: {
       dark: theme === 'dark' ? '#f5f5f5' : '#000',

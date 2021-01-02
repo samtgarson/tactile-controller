@@ -7,7 +7,7 @@ import Image from 'next/image'
 import styles from './nav.module.scss'
 
 export const NavBar = () => {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme: theme, setTheme } = useTheme()
   const ThemeSwitcher = useMemo(() => theme === 'dark' ? Moon : Sun, [theme])
   const navColor = useMemo(() => theme === 'dark' ? 'dark' : 'white', [theme])
   const icon = useMemo(() => theme === 'dark' ? '/hand-light.png' : '/hand.png', [theme])
