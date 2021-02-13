@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let Config = Configuration.read()
+let Config = Configuration()
 
 @main
 struct TactileController: App {

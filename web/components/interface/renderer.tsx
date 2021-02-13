@@ -13,7 +13,7 @@ type RendererProps = {
 
 export const Renderer: FunctionComponent<RendererProps> = ({ channel }) => {
   const message = useRef<Message>()
-  const { theme } = useTheme()
+  const { resolvedTheme: theme } = useTheme()
 
   useEvent<Message>(channel, 'client-update', val => {
     if (!val) return

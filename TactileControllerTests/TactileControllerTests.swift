@@ -1,6 +1,6 @@
 //
-//  InputExperimentTests.swift
-//  InputExperimentTests
+//  TactileControllerTests.swift
+//  TactileControllerTests
 //
 //  Created by Sam Garson on 04/10/2020.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import TactileController
 
-class InputExperimentTests: XCTestCase {
+class TactileControllerTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,6 +21,7 @@ class InputExperimentTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true)
     }
 
     func testPerformanceExample() throws {

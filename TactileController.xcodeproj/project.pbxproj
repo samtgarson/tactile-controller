@@ -21,7 +21,7 @@
 		223ACB762529CEC30096EF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB752529CEC30096EF54 /* ContentView.swift */; };
 		223ACB782529CEC40096EF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB772529CEC40096EF54 /* Assets.xcassets */; };
 		223ACB7B2529CEC40096EF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */; };
-		223ACB862529CEC40096EF54 /* InputExperimentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB852529CEC40096EF54 /* InputExperimentTests.swift */; };
+		223ACB862529CEC40096EF54 /* TactileControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223ACB852529CEC40096EF54 /* TactileControllerTests.swift */; };
 		224E81512538F1BD00121289 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E81502538F1BD00121289 /* TouchView.swift */; };
 		2265CA752531082900694C05 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2265CA742531082900694C05 /* Alamofire */; };
 		2265CA79253108B300694C05 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2265CA78253108B300694C05 /* UserService.swift */; };
@@ -71,7 +71,7 @@
 		223ACB7A2529CEC40096EF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		223ACB7C2529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		223ACB812529CEC40096EF54 /* TactileControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TactileControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		223ACB852529CEC40096EF54 /* InputExperimentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputExperimentTests.swift; sourceTree = "<group>"; };
+		223ACB852529CEC40096EF54 /* TactileControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TactileControllerTests.swift; sourceTree = "<group>"; };
 		223ACB872529CEC40096EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224E81502538F1BD00121289 /* TouchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
 		2265CA78253108B300694C05 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		223ACB842529CEC40096EF54 /* TactileControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				223ACB852529CEC40096EF54 /* InputExperimentTests.swift */,
+				223ACB852529CEC40096EF54 /* TactileControllerTests.swift */,
 				223ACB872529CEC40096EF54 /* Info.plist */,
 			);
 			path = TactileControllerTests;
@@ -379,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223ACB862529CEC40096EF54 /* InputExperimentTests.swift in Sources */,
+				223ACB862529CEC40096EF54 /* TactileControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,14 +478,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZR99J9ZFT;
-				INFOPLIST_FILE = InputExperimentTests/Info.plist;
+				INFOPLIST_FILE = TactileControllerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.InputExperimentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.TactileControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -583,14 +583,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SZR99J9ZFT;
-				INFOPLIST_FILE = InputExperimentTests/Info.plist;
+				INFOPLIST_FILE = TactileControllerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.InputExperimentTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgarson.TactileControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -54,27 +54,31 @@ class PusherClient {
 
 extension PusherClient: PusherDelegate {
     func changedConnectionState(from old: ConnectionState, to new: ConnectionState) {
-        print("old: \(old.stringValue()) -> new: \(new.stringValue())")
+        debugPrint("old: \(old.stringValue()) -> new: \(new.stringValue())")
         call(.changedConnectionState, new.stringValue())
     }
     
     func subscribedToChannel(name: String) {
-        print("Subscribed to \(name)")
+        debugPrint("Subscribed to \(name)")
         call(.subscribedToChannel, name)
     }
     
     func debugLog(message: String) {
-        print(message)
+        debugPrint(message)
         call(.debugLog, message)
     }
     
     func failedToSubscribeToChannel(name: String, response: URLResponse?, data: String?, error: NSError?) {
-        print("Failed to subscribe to channel \(name)")
+        debugPrint("Failed to subscribe to channel \(name)")
         call(.failedToSubscribeToChannel, name)
     }
     
     func receivedError(error: PusherError) {
-        print("Received error: \(error.message) (\(error.code ?? 0)")
+        debugPrint("Received error: \(error.message) (\(error.code ?? 0)")
         call(.receivedError, error.message)
+    }
+    
+    private func debugPrint(_ msg: String) {
+        if Config.debug { print(msg) }
     }
 }
